@@ -1,0 +1,11 @@
+Commands for creating strong named assembly calc.dll and deploying it to GAC:-
+
+-> sn -k mykey.snk
+-> csc /t:library  /keyfile:mykey.snk calc.cs
+-> gacutil -i calc.dll
+
+Commands for creating new version calc.dll and uploading to GAC:-
+
+(After creating a calc.dll.config file do following steps)
+-> csc /t:library /keyfile:mykey.snk calc.cs
+-> gacutil -i calc.dll
