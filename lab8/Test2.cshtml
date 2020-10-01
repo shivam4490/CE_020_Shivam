@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewData["Title"] = "Test2";
+}
+
+<h1>Test2</h1>
+
+<form method="post">
+    @Html.Label("n1")
+    @Html.TextBox("n1")
+
+    <br />
+    @Html.Label("n2")
+    @Html.TextBox("n2")
+    <br />
+    <button>Add</button>
+
+    <br />
+    @Html.Label("Sum:")
+    @ViewBag.sum
+</form>
+

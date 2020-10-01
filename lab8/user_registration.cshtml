@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewData["Title"] = "user_registration";
+}
+
+<h1>user_registration</h1>
+ 
+@using (Html.BeginForm())
+{
+    
+    <table>
+        <tr>
+            <td>
+                Full Name : 
+            </td>
+            <td>
+                @Html.TextBox("name")
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Username:
+            </td>
+            <td>
+                @Html.TextBox("uname")
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Email : 
+            </td>
+            <td>
+                @Html.TextBox("email")
+            </td>
+        </tr>
+		<tr>
+            <td>
+                <button type="submit">Register</button>
+            </td>
+        </tr>
+        
+    </table>
+}
+
+<br />
+<br />
+<h3>User Details</h3>
+<br/>
+<br/>
+<table>
+    <tr>
+        <td>
+            Name :
+        </td>
+        <td>
+            @ViewBag.name
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Username:
+        </td>
+        <td>
+            @ViewBag.uname
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Email :
+        </td>
+        <td>
+            @ViewBag.email
+        </td>
+    </tr>
+</table>
+
